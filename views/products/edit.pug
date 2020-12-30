@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    form(action="/products/edit/"+products._id, method="post")
+        div.form-group
+            label(for="name") Enter Name
+            input#name(type="text", class="form-control",name="name",value=products.name)
+        div.form-group
+            label(for="price") Enter Price
+            input#price(type="text", class="form-control",name="price",value=products.price)
+        input(type="submit",class="btn btn-info")

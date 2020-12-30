@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1 Register
+    hr
+    form(action="/users/login", method="post")
+        div.form-group
+            label(for="email") Enter Email
+            input#email(type="email", class="form-control",name="email")
+        div.form-group
+            label(for="price") Enter Password
+            input#price(type="pass", class="form-control",name="pass")
+        input(type="submit",class="btn btn-info")
+  

@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    a(href="/products/add",class="btn btn-success float-right") Add New Product
+    table.table
+        thead
+            tr
+                th Name
+                th Price
+                th Action
+        tbody
+            each val in products
+                tr
+                    td=val.name
+                    td=val.price
+                    td
+                        a(href="/products/delete/"+val._id,class="btn btn-danger mx-2") Delete
+                        a(href="/products/edit/"+val._id,class="btn btn-warning") Edit
+                        a(href="/products/cart/"+val._id,class="btn btn-info mx-2") Add To Cart
